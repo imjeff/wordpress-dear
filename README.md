@@ -23,7 +23,7 @@ License: CC BY-NC-SA 4.0 DEED
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 
 
-## 主题介
+## 主题介绍
 
 本主题复刻于 Bear 示例主题。既然是复刻“bear”，那本主题就姑且叫 “dear” 吧，亲爱的。
 
