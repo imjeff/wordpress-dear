@@ -1,15 +1,25 @@
 # Dear
 
-Contributors: Jeff Chen
 Theme URI: https://yayu.net/projects/wordpress-dear
+
 Author URI: https://yayu.net/
+
 Description: 极极简主题，无 JS、CSS 文件载入，对程序极简优化。样式复刻于 Bear 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式；内置文章归档模板；已作中文字体优化，内置3种字体方案可选。主题仅10个文件共49kb。
+
 Tags: blog, one-column, full-width-template, minimalism
+
+Contributors: Jeff Chen
+
 Version: 1.0
+
 Requires at least: 4.5
+
 Requires PHP: 5.6
+
 Tested up to: 6.4.1
+
 License: CC BY-NC-SA 4.0 DEED
+
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 
 
@@ -38,15 +48,10 @@ License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 
 ## 常见问题
 
-**主题禁用功能和插件冲突怎么办？**
+### 主题禁用功能和插件冲突怎么办？
+
 使用代码编辑器打开主题内 functions.php，删除冲突部分的代码，上传文件替换即可。
 
-**首页显示的文章数太多/太少怎么办？**
+### 首页显示的文章数太多/太少怎么办？
+
 使用代码编辑器修改主题内 funcitons.php 文件，按提示修改第15行“文章数设置”部分的数量，上传文件替换即可。
-
-
-## 发布日志
-
-Version 1.0 (2023-11-23)
--------------------------
-- 始发
