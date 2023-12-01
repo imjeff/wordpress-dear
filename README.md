@@ -4,7 +4,7 @@ Theme URI: https://yayu.net/projects/wordpress-dear
 
 Author URI: https://yayu.net/
 
-Description: 极极简主题，无 JS、CSS 文件载入，对程序极简优化。样式复刻于 Bear 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式；内置文章归档模板；已作中文字体优化，内置3种字体方案可选。主题仅10个文件共49kb。
+Description: 极极简主题，无 JS、CSS 文件载入，对程序极简优化。样式复刻于 Bear 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式；内置文章归档模板；已作中文字体优化，内置3种字体方案可选。主题仅9个文件共49kb。
 
 Tags: blog, one-column, full-width-template, minimalism
 
