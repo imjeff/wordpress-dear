@@ -52,4 +52,4 @@
 
 ### 如何让主题支持评论？
 
-在主题 index.php 文件的21和22行之间换行插入以下代码 <p><br /><?php if (comments_open()) {comments_template();}?></p> 即可。显示出来的样式是可以接受的，可按个人喜好另行补充样式。
+在主题 index.php 文件的21和22行之间换行插入以下代码 ```<p><br /><?php if (comments_open()) {comments_template();}?></p>``` 即可。显示出来的样式是可以接受的，可按个人喜好另行补充样式。
