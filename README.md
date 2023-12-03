@@ -1,26 +1,20 @@
 # Dear
 
-Theme URI: https://yayu.net/projects/wordpress-dear
+主题介绍: 极极简主题，无 JS、CSS 文件载入，对程序极简优化。样式复刻于 Bear 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式；内置文章归档模板；已作中文字体优化，内置3种字体方案可选。主题仅10个文件共49kb。
 
-Author URI: https://yayu.net/
+关键词: 博客，单栏，极简，免费
 
-Description: 极极简主题，无 JS、CSS 文件载入，对程序极简优化。样式复刻于 Bear 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式；内置文章归档模板；已作中文字体优化，内置3种字体方案可选。主题仅10个文件共49kb。
+主题发布页: https://yayu.net/projects/wordpress-dear
 
-Tags: blog, one-column, full-width-template, minimalism
+作者: Jeff Chen
 
-Contributors: Jeff Chen
+作者网站: https://yayu.net/
 
-Version: 1.0
+最新版本: 1.0
 
-Requires at least: 4.5
+授权方式: CC BY-NC-SA 4.0 DEED
 
-Requires PHP: 5.6
-
-Tested up to: 6.4.1
-
-License: CC BY-NC-SA 4.0 DEED
-
-License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
+授权介绍: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 
 
 ## 主题介绍
@@ -55,3 +49,7 @@ License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 ### 首页显示的文章数太多/太少怎么办？
 
 使用代码编辑器修改主题内 funcitons.php 文件，按提示修改第15行“文章数设置”部分的数量，上传文件替换即可。
+
+### 如何让主题支持评论？
+
+在主题 index.php 文件的21和22行之间换行插入以下代码 <p><br /><?php if (comments_open()) {comments_template();}?></p> 即可。显示出来的样式是可以接受的，可按个人喜好另行补充样式。
