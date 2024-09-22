@@ -6,13 +6,13 @@ Template Name: 所有文章
 <?php get_header(); ?>
 <?php if(is_archive()){ ?>
 <h1 class="title"><?php the_archive_title(); ?></h1>
-<span>共有 <?php echo esc_html($wp_query->found_posts); ?> 篇文章</span>
+<span class="intro">共有 <?php echo esc_html($wp_query->found_posts); ?> 篇文章</span>
 <p>
 <?php if ( have_posts() ) : ?>
 <ul class="posts">
 <?php while ( have_posts() ) : the_post(); ?>
 <li>
-<span><i><time datetime="<?php the_time('Y年m月d日');?>"><?php the_time('Y-m-d');?></time></i></span>
+<span><time datetime="<?php the_time('Y年m月d日');?>"><?php the_time('Y-m-d');?></time></span>
 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </li>
 <?php endwhile; ?>
@@ -43,8 +43,8 @@ endif;
 $previous_year = $year; $previous_month = $month;
 ?>
 <li>
-<span><i><time datetime="<?php the_time('Y年m月d日');?>"><?php the_time('Y-m-d');?></time></i></span>
-<?php $category = get_the_category(); echo $category[0]->cat_name; ?>&nbsp·&nbsp<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( $title_args ); ?>"><?php the_title_attribute( $title_args ); ?></a>
+<span><time datetime="<?php the_time('Y年m月d日');?>"><?php the_time('Y-m-d');?></time></span>
+<div><?php if ( 'post' == get_post_type()){ the_category(', '); echo "&nbsp &middot; &nbsp"; } ?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
 </li>
 <?php endforeach; ?>
 </p>

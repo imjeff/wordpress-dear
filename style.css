@@ -3,12 +3,77 @@ Theme Name: Dear
 Theme URI: https://yayu.net/projects/wordpress-dear
 Author: Jeff Chen
 Author URI: https://yayu.net/
-Description: 极极简主题，无 JS、CSS 文件载入，对程序极简优化。样式复刻于 Bear 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式；内置文章归档模板；已作中文字体优化，内置3种字体方案可选。主题仅10个文件共49kb。
-Tags: blog, one-column, full-width-template, minimalism
-Version: 1.0
-Requires at least: 4.5
-Requires PHP: 5.6
-Tested up to: 6.4.1
+Description: Dear 是一款 WordPress & Typecho 纯文本极极简主题，样式复刻于 Bear Blog 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式和自适应；内置文章归档和搜索模板；已作中文字体优化，内置3种字体方案可选。力求极简，对程序自带功能进行禁用及优化，主题无 JS、图片文件引用。
+Tags: blog, plaintext, one-column, full-width-template, minimalism, responsive, dark-mode, free
+Version: 1.1.0
 License: CC BY-NC-SA 4.0 DEED
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 */
+:root {
+    --width: 660px;
+    --font-yahei: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Helvetica,Arial,"PingFangSC-Regular","Hiragino Sans GB","Lantinghei SC","Microsoft Yahei","Source Han Sans CN","WenQuanYi Micro Hei",SimSun,sans-serif;
+    --font-fangsong: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
+    --font-songti: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color:  #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+    --gray-color: #999;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #111;
+        --heading-color: #eee;
+        --text-color: #ddd;
+        --link-color: #6ab0e5;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #000;
+        --code-color: #ddd;
+        --blockquote-color: #ccc;
+        --gray-color: #999;
+    }
+}
+body {
+    font-family: var(--font-yahei); /* 可替换 --font-fangsong 或 --font-songti 字体 */
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+html{scroll-behavior:smooth;}
+h1,h2,h3,h4,h5,h6{color:var(--heading-color);display:inherit}
+a{color:var(--link-color);cursor:pointer;text-decoration:none;border-bottom:1px solid transparent}
+a:hover,a[aria-current*="page"]{border-bottom:1px solid}
+nav a{margin-right:8px}
+strong,b{color:var(--heading-color)}
+button{margin:0;cursor:pointer}
+table{width:100%}
+hr{border:0;border-top:1px dashed}
+img{max-width:100%;height:auto}
+time,.intro{color:var(--gray-color);}
+code{font-family:monospace;padding:2px;background-color:var(--code-background-color);color:var(--code-color);border-radius:4px}
+blockquote{border-left:1px solid #999;color:var(--code-color);padding-left:20px;font-style:italic}
+input{border-radius:4px;border:1px solid var(--gray-color);margin:0 0 15px 0;padding:10px;width:50%}
+input:focus{outline:0}
+input[type="submit"]{padding:9px 10px 10px;text-align:center;width:80px;display:inline-flex;background-color:var(--heading-color);color:var(--code-background-color);border:none}
+input[type="submit"]:hover{cursor:pointer;opacity:.7}
+header,footer{padding:20px 0}
+.title:hover{text-decoration:none;border:none}
+.title h1,.title h2{font-size:1.5em}
+ul.posts{list-style-type:none;padding:unset}
+ul.posts li{display:flex;margin:3px 0}
+ul.posts li span{flex:0 0 115px}
+ul.posts li a:visited{color:var(--visited-color)}
+.tags{margin-top:30px;color:var(--gray-color)}
+.tags a{margin:0 5px 0 2px}

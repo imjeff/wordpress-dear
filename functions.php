@@ -11,10 +11,18 @@ if (!function_exists('dear_setup')) :
     add_action('after_setup_theme', 'dear_setup');
 endif;
 
+// 主题样式
+if ( ! function_exists( 'yayu_load_style' ) ) :
+	function yayu_load_style() {
+		wp_enqueue_style( 'dear-style', get_stylesheet_uri(), array(), '20240920' );
+	}
+	add_action( 'wp_enqueue_scripts', 'yayu_load_style' );
+endif;
+
 // 文章数设置
 function custom_posts_per_page($query){
     if(is_home()){
-        $query->set('posts_per_page',10); //首页近期更新文章数
+        $query->set('posts_per_page',8); //首页近期更新文章数
     }
     if(is_search()){
         $query->set('posts_per_page',-1); //搜索页显示所有匹配的文章，默认不分页
