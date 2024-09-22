@@ -16,7 +16,7 @@
 
 授权介绍: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 
-主题声明: 主题复刻于 Bear Blog 示例主题 (https://herman.bearblog.dev/)，并在原基础上进行改造及中文优化。既然是复刻“b”ear，那本主题就姑且叫 “d”ear 吧，亲爱的。
+主题声明: 主题复刻于 Bear Blog 示例主题 ( https://herman.bearblog.dev/ )，并在原基础上进行改造及中文优化。既然是复刻“b”ear，那本主题就姑且叫 “d”ear 吧，亲爱的。
 
 
 ## 使用方法
