@@ -148,4 +148,18 @@ add_action( 'wp_print_styles', function()
 add_action( 'wp_enqueue_scripts', function() {
 	wp_dequeue_style( 'classic-theme-styles' );
 }, 20 );
+
+//回复评论框跟随。如需启用，去掉 add_action 前面的注释符 //
+if (!function_exists('yayu_enqueue_scripts')) :
+	function yayu_enqueue_scripts()
+	{
+		if ((!is_admin()) && is_singular()) {
+			wp_enqueue_script('jquery', '', 'jquery', '', true);
+			if (comments_open() && get_option('thread_comments')) {
+				wp_enqueue_script('comment-reply');
+			};
+		};
+	}
+	//add_action('wp_enqueue_scripts', 'yayu_enqueue_scripts');
+endif;
 ?>

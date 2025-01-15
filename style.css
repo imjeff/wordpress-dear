@@ -5,7 +5,7 @@ Author: Jeff Chen
 Author URI: https://yayu.net/
 Description: Dear 是一款 WordPress & Typecho 纯文本极极简主题，样式复刻于 Bear Blog 示例主题。主题支持自定义背景、自定义菜单、自定义首页内容，支持黑暗模式和自适应；内置文章归档和搜索模板；已作中文字体优化，内置3种字体方案可选。力求极简，对程序自带功能进行禁用及优化，主题无 JS、图片文件引用。
 Tags: blog, plaintext, one-column, full-width-template, minimalism, responsive, dark-mode, free
-Version: 1.1.0
+Version: 1.2.0
 License: CC BY-NC-SA 4.0 DEED
 License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
 */
@@ -23,7 +23,7 @@ License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
     --code-background-color: #f2f2f2;
     --code-color: #222;
     --blockquote-color: #222;
-    --gray-color: #999;
+    --gray-color: #aaa;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -35,7 +35,7 @@ License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
         --code-background-color: #000;
         --code-color: #ddd;
         --blockquote-color: #ccc;
-        --gray-color: #999;
+        --gray-color: #888;
     }
 }
 body {
@@ -64,10 +64,11 @@ img{max-width:100%;height:auto}
 time,.intro{color:var(--gray-color);}
 code{font-family:monospace;padding:2px;background-color:var(--code-background-color);color:var(--code-color);border-radius:4px}
 blockquote{border-left:1px solid #999;color:var(--code-color);padding-left:20px;font-style:italic}
-input{border-radius:4px;border:1px solid var(--gray-color);margin:0 0 15px 0;padding:10px;width:50%}
-input:focus{outline:0}
-input[type="submit"]{padding:9px 10px 10px;text-align:center;width:80px;display:inline-flex;background-color:var(--heading-color);color:var(--code-background-color);border:none}
+input{border-radius:4px;border:1px solid var(--gray-color);margin:0 0 15px 0;padding:10px;width:50%;font-size:0.9em;background:var(--background-color);color:var(--heading-color)}
+input[type="submit"]{border:none;padding:9px 16px 10px;text-align:center;width:80px;display:inline-flex;background-color:var(--heading-color);color:var(--code-background-color);}
 input[type="submit"]:hover{cursor:pointer;opacity:.7}
+textarea{border-radius:4px;border:1px solid var(--gray-color);display:block;margin:0 0 10px;padding:10px;width:calc(100% - 25px);background:var(--background-color);color:var(--code-color);}
+input:focus,textarea:focus{border:1px solid var(--text-color);outline:0}
 header,footer{padding:20px 0}
 .title:hover{text-decoration:none;border:none}
 .title h1,.title h2{font-size:1.5em}
@@ -77,3 +78,15 @@ ul.posts li span{flex:0 0 115px}
 ul.posts li a:visited{color:var(--visited-color)}
 .tags{margin-top:30px;color:var(--gray-color)}
 .tags a{margin:0 5px 0 2px}
+.comment-respond{text-align:left;padding-top:40px;}
+.comlist{margin:80px auto 0;}
+.commentlist,.commentlist .children{list-style: none;padding:0;margin-bottom:40px;}
+.comment{margin:30px 0;list-style: none;text-align:left;}
+.comment .comment{margin-left:35px;}
+.comment-author cite{font-weight:bold;font-style:normal;}
+.comment-author .says,.comment-author .avatar,.screen-reader-text{display:none}
+.comment-meta a{color: var(--gray-color);font-size: 0.9rem;}
+.comlist input{display:block;width:calc(100% - 25px);}
+.comlist input[type="submit"]{width:initial;}
+.comlist input[type="checkbox"]{display:inline-block;width: initial;}
+#cancel-comment-reply-link{margin-left:15px;font-weight: normal;}

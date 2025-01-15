@@ -16,8 +16,9 @@ echo apply_filters('the_content', get_post($article_id)->post_content);?>
 <?php } else { if (have_posts()) { while (have_posts()) { the_post(); ?>
 <h1><?php the_title(); ?></h1>
 <?php if ( is_single() ) : ?><p><?php the_category( ', ' );?>&nbsp · &nbsp<time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date( get_option( 'date_format' ) ); ?></time></p><?php endif; ?>
-<p><?php the_content(); ?></p>
+<div class="content"><?php the_content(); ?></div>
 <p><?php wp_link_pages(); ?></p>
 <?php if ( is_single() && get_the_tags() ) : ?><p class="tags"><?php the_tags( ' #', ' #', '' ); ?></p><?php endif; ?>
+<?php if ( comments_open() ) { ?><div class="comlist"><?php comments_template();?></div><?php } ?>
 <?php }}} ?>
 <?php get_footer();?>
